@@ -15,6 +15,11 @@
 		C9BAE45E1E8BAD06003A9B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BAE45C1E8BAD06003A9B4F /* LaunchScreen.storyboard */; };
 		C9BAE4691E8BAD06003A9B4F /* MultipeerConnectivity_ServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAE4681E8BAD06003A9B4F /* MultipeerConnectivity_ServiceTests.m */; };
 		C9BAE4741E8BAD06003A9B4F /* MultipeerConnectivity_ServiceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAE4731E8BAD06003A9B4F /* MultipeerConnectivity_ServiceUITests.m */; };
+		C9BAE4861E8BB48A003A9B4F /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BAE4851E8BB48A003A9B4F /* MultipeerConnectivity.framework */; };
+		C9BAE48B1E8C9A86003A9B4F /* LxMultConnectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAE48A1E8C9A86003A9B4F /* LxMultConnectManager.m */; };
+		C9BAE48E1E8C9AA6003A9B4F /* LxMultBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAE48D1E8C9AA6003A9B4F /* LxMultBrowser.m */; };
+		C9BAE49D1E8CBB01003A9B4F /* LxMultSession.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAE49C1E8CBB01003A9B4F /* LxMultSession.m */; };
+		C9BAE4A01E8CF393003A9B4F /* LxMultPeerID.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAE49F1E8CF393003A9B4F /* LxMultPeerID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,15 @@
 		C9BAE46F1E8BAD06003A9B4F /* MultipeerConnectivity_ServiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultipeerConnectivity_ServiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BAE4731E8BAD06003A9B4F /* MultipeerConnectivity_ServiceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipeerConnectivity_ServiceUITests.m; sourceTree = "<group>"; };
 		C9BAE4751E8BAD06003A9B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9BAE4851E8BB48A003A9B4F /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		C9BAE4891E8C9A86003A9B4F /* LxMultConnectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxMultConnectManager.h; sourceTree = "<group>"; };
+		C9BAE48A1E8C9A86003A9B4F /* LxMultConnectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxMultConnectManager.m; sourceTree = "<group>"; };
+		C9BAE48C1E8C9AA6003A9B4F /* LxMultBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxMultBrowser.h; sourceTree = "<group>"; };
+		C9BAE48D1E8C9AA6003A9B4F /* LxMultBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxMultBrowser.m; sourceTree = "<group>"; };
+		C9BAE49B1E8CBB01003A9B4F /* LxMultSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxMultSession.h; sourceTree = "<group>"; };
+		C9BAE49C1E8CBB01003A9B4F /* LxMultSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxMultSession.m; sourceTree = "<group>"; };
+		C9BAE49E1E8CF393003A9B4F /* LxMultPeerID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxMultPeerID.h; sourceTree = "<group>"; };
+		C9BAE49F1E8CF393003A9B4F /* LxMultPeerID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxMultPeerID.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BAE4861E8BB48A003A9B4F /* MultipeerConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,7 @@
 				C9BAE4671E8BAD06003A9B4F /* MultipeerConnectivity_ServiceTests */,
 				C9BAE4721E8BAD06003A9B4F /* MultipeerConnectivity_ServiceUITests */,
 				C9BAE44C1E8BAD06003A9B4F /* Products */,
+				C9BAE4841E8BB48A003A9B4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +121,7 @@
 				C9BAE4521E8BAD06003A9B4F /* AppDelegate.m */,
 				C9BAE4541E8BAD06003A9B4F /* ViewController.h */,
 				C9BAE4551E8BAD06003A9B4F /* ViewController.m */,
+				C9BAE4881E8C9A86003A9B4F /* LxMultConnectManage */,
 				C9BAE4571E8BAD06003A9B4F /* Main.storyboard */,
 				C9BAE45A1E8BAD06003A9B4F /* Assets.xcassets */,
 				C9BAE45C1E8BAD06003A9B4F /* LaunchScreen.storyboard */,
@@ -138,6 +155,29 @@
 				C9BAE4751E8BAD06003A9B4F /* Info.plist */,
 			);
 			path = MultipeerConnectivity_ServiceUITests;
+			sourceTree = "<group>";
+		};
+		C9BAE4841E8BB48A003A9B4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9BAE4851E8BB48A003A9B4F /* MultipeerConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9BAE4881E8C9A86003A9B4F /* LxMultConnectManage */ = {
+			isa = PBXGroup;
+			children = (
+				C9BAE4891E8C9A86003A9B4F /* LxMultConnectManager.h */,
+				C9BAE48A1E8C9A86003A9B4F /* LxMultConnectManager.m */,
+				C9BAE48C1E8C9AA6003A9B4F /* LxMultBrowser.h */,
+				C9BAE48D1E8C9AA6003A9B4F /* LxMultBrowser.m */,
+				C9BAE49E1E8CF393003A9B4F /* LxMultPeerID.h */,
+				C9BAE49F1E8CF393003A9B4F /* LxMultPeerID.m */,
+				C9BAE49B1E8CBB01003A9B4F /* LxMultSession.h */,
+				C9BAE49C1E8CBB01003A9B4F /* LxMultSession.m */,
+			);
+			path = LxMultConnectManage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BAE48E1E8C9AA6003A9B4F /* LxMultBrowser.m in Sources */,
+				C9BAE49D1E8CBB01003A9B4F /* LxMultSession.m in Sources */,
+				C9BAE48B1E8C9A86003A9B4F /* LxMultConnectManager.m in Sources */,
 				C9BAE4561E8BAD06003A9B4F /* ViewController.m in Sources */,
+				C9BAE4A01E8CF393003A9B4F /* LxMultPeerID.m in Sources */,
 				C9BAE4531E8BAD06003A9B4F /* AppDelegate.m in Sources */,
 				C9BAE4501E8BAD06003A9B4F /* main.m in Sources */,
 			);
@@ -429,6 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FNU9VD9ZK4;
 				INFOPLIST_FILE = MultipeerConnectivity_Service/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lx.Multipeer.com.MultipeerConnectivity-Service";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +486,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FNU9VD9ZK4;
 				INFOPLIST_FILE = MultipeerConnectivity_Service/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lx.Multipeer.com.MultipeerConnectivity-Service";
 				PRODUCT_NAME = "$(TARGET_NAME)";
