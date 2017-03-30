@@ -22,5 +22,9 @@ typedef MCSession *(^BrowserBlock)(MCPeerID *peerId,BOOL isLost);
  * @param serviceType 发起搜寻的类型，必须同类型的搜寻才能互相发现
  **/
 - (void)startSearchDevicesWithPeerId:(MCPeerID *)peerId serviceType:(NSString *)serviceType;
+/**
+ *重置搜寻功能
+ **/
+- (void)resetBrowser;
 
 @end

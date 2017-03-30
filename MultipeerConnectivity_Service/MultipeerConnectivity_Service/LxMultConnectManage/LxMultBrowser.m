@@ -39,6 +39,14 @@
     
 }
 
+- (void)resetBrowser
+{
+    self.nearByBrowser.delegate = nil;
+    self.searchBlock = nil;
+    [self.nearByBrowser stopBrowsingForPeers];
+    self.nearByBrowser = nil;
+}
+
 #pragma mark - McNearbyBrowserDelegate
 // Found a nearby advertising peer.
 - (void)browser:(MCNearbyServiceBrowser *)browser

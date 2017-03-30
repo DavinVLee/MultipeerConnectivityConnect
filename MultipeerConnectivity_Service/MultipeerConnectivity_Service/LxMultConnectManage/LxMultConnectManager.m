@@ -63,6 +63,7 @@
 #pragma mark - CallFunction
 - (void)setupPlatformType:(MC_PlatformType)type andPeerIDs:(NSArray *)peerIDs block:(ConnectManagerBlock)aBlock;
 {
+    self.receiveBlock = nil;
     self.receiveBlock = [aBlock copy];
     self.platformType = type;
     [self.peerIdsArray removeAllObjects];
@@ -79,6 +80,19 @@
                               connectedPeers]
                     withMode:MCSessionSendDataReliable
                        error:nil];
+}
+
+- (void)resetConnect
+{
+    self.myPeerID = nil;
+    self.mySession.delegate = nil;
+    [self.mySession disconnect];
+    self.mySession =  nil;
+    self.receiveBlock = nil;
+    [self.nearByBrowser resetBrowser];
+    self.nearByBrowser = nil;
+    
+    
 }
 
 #pragma mark - init
@@ -141,6 +155,9 @@
     switch (state) {
         case MCSessionStateConnected:
         {
+            /*for (int i = 0; i < NSNotFound; i ++) {
+                [self sendMessage:@"fwefew"];
+            }*/
         }
             break;
             case MCSessionStateConnecting:

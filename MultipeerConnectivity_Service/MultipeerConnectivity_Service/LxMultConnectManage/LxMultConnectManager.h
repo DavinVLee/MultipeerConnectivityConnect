@@ -32,5 +32,9 @@ typedef void(^ConnectManagerBlock)(NSString *receiveMessage,NSString *peerId);
  *发送消息，暂时只有服务端和客户端的对发，，服务端默认发送所有已连接的客户端
  **/
 - (void)sendMessage:(NSString *)str;
+/**
+ *重置连接状态
+ **/
+- (void)resetConnect;
 
 @end

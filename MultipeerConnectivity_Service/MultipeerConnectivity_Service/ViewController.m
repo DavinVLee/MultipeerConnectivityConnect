@@ -48,6 +48,7 @@
 - (IBAction)clickStart:(id)sender {
     NSArray *peerIdsArray = [self.avaibleIDfiled.text componentsSeparatedByString:@","];
     __weak typeof(self) weakSelf = self;
+    [self.connectManager resetConnect];
     [self.connectManager setupPlatformType:(peerIdsArray.count > 1 ? MC_PlatformService : MC_PlatformClient) andPeerIDs:peerIdsArray block:^(NSString *receiveMessage, NSString *peerId) {
         NSString *str = [NSString stringWithFormat:@"%@%@:%@\n",weakSelf.textInputTextView.text,peerId,receiveMessage];
         dispatch_async(dispatch_get_main_queue(), ^{
