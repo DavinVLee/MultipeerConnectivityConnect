@@ -23,7 +23,7 @@ typedef void(^ConnectManagerBlock)(NSString *receiveMessage,NSString *peerId);
 /**
  *获取实例方法
  * @param type   类型，分为服务端和客户端
- * @param peerIDs 唯一标识集合，其中第一个为自身标识，，所以直接定义死每个设备的标识
+ * @param peerIDs 唯一标识集合，其中第一个为自身标识，主要用于海伦课堂控制，所以直接定义死每个设备的标识
  **/
 
 - (void)setupPlatformType:(MC_PlatformType)type andPeerIDs:(NSArray *)peerIDs block:(ConnectManagerBlock)aBlock;
