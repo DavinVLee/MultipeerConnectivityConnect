@@ -46,6 +46,21 @@
     [self.nearByBrowser stopBrowsingForPeers];
     self.nearByBrowser = nil;
 }
+/**
+ *暂停搜索设备
+ **/
+- (void)pauseBrowser
+{
+    [self.nearByBrowser stopBrowsingForPeers];
+}
+/**
+ *继续搜索设备
+ **/
+- (void)continueBrowser
+{
+    [self.nearByBrowser startBrowsingForPeers];
+}
+
 
 #pragma mark - McNearbyBrowserDelegate
 // Found a nearby advertising peer.

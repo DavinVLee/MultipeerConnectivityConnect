@@ -17,9 +17,9 @@
 /*****************************MultConnect相关******************************/
 @property (strong, nonatomic) MCPeerID *myPeerID;//唯一标识
 /**
- *会话管理（聊天室)
+ *会话管理（聊天室)客户端使用，
  **/
-@property (strong, nonatomic) MCSession *mySession;
+@property (strong, nonatomic) LxMultSession *mySession;
  /**
  *负责附近设备的邀请管理
  **/
@@ -44,6 +44,7 @@
 @property (strong, nonatomic) NSMutableArray <NSString *>*peerIdsArray;
 
 @property (strong, nonatomic) dispatch_queue_t sessionQueue;
+@property (strong, nonatomic) NSMutableArray  <LxMultSession *>*sessionArray;
 @end
 
 @implementation LxMultConnectManager
@@ -64,6 +65,24 @@
     return _peerIdsArray;
 }
 
+- (NSMutableArray<LxMultSession *>*)sessionArray
+{
+    if (!_sessionArray) {
+        _sessionArray = [[NSMutableArray alloc] init];
+    }
+    return _sessionArray;
+}
+
+- (LxMultSession *)getNewSession
+{
+    LxMultSession *session = [[LxMultSession alloc] initWithPeer:self.myPeerID
+                                                securityIdentity:nil
+                                            encryptionPreference:MCEncryptionNone];
+    session.delegate = self;
+    [self.sessionArray addObject:session];
+    return session;
+}
+
 #pragma mark - CallFunction
 - (void)setupPlatformType:(MC_PlatformType)type andPeerIDs:(NSArray *)peerIDs block:(ConnectManagerBlock)aBlock;
 {
@@ -79,11 +98,17 @@
 {
     NSData *sendData = [str dataUsingEncoding:NSUTF8StringEncoding];
     if (self.platformType == MC_PlatformService) {//服务端向所有客户端发送消息
-        [self.mySession sendData:sendData
+       /* [self.mySession sendData:sendData
                          toPeers:[self.mySession
                                   connectedPeers]
                         withMode:MCSessionSendDataReliable
-                           error:nil];
+                           error:nil];*/
+        for (LxMultSession *session in self.sessionArray) {
+            [session sendData:sendData
+                      toPeers:[session connectedPeers]
+                     withMode:MCSessionSendDataReliable
+                        error:nil];
+        }
     }else if(self.serverId)
     {
         [self.mySession sendData:sendData//客户端只向服务端发送消息
@@ -104,16 +129,34 @@
     self.receiveBlock = nil;
     [self.nearByBrowser resetBrowser];
     self.nearByBrowser = nil;
-    
-    
+    for (LxMultSession *session in self.sessionArray) {
+        session.delegate = nil;
+        [session disconnect];
+    }
+    [self.sessionArray removeAllObjects];
+}
+
+- (void)pauseAllConnect
+{
+    for (LxMultSession *session in self.sessionArray) {
+        session.delegate = nil;
+        [session disconnect];
+    }
+    [self.sessionArray removeAllObjects];
+    [self.nearByAdvertiser stopAdvertisingPeer];
+    [self.nearByBrowser pauseBrowser];
+}
+
+- (void)continueAllConnect
+{
+    [self.nearByAdvertiser startAdvertisingPeer];
+    [self.nearByBrowser continueBrowser];
 }
 
 #pragma mark - init
 - (void)setupDefault
 {
     self.myPeerID = [[MCPeerID alloc] initWithDisplayName:[self.peerIdsArray firstObject]];
-    self.mySession = [[MCSession alloc] initWithPeer:self.myPeerID securityIdentity:nil encryptionPreference:MCEncryptionNone];
-    self.mySession.delegate = self;
 
     //开始搜寻设备
     if (self.platformType == MC_PlatformService) {
@@ -125,8 +168,11 @@
                 
             }else
             {
-                if ([weakSelf.peerIdsArray containsObject:peerId.displayName] && ![peerId.displayName isEqualToString:weakSelf.myPeerID.displayName]) {
-                    return weakSelf.mySession;
+                if ([weakSelf.peerIdsArray containsObject:peerId.displayName] &&
+                    ![peerId.displayName isEqualToString:weakSelf.myPeerID.displayName]) {
+                    LxMultSession *newSession = [weakSelf getNewSession];
+                    newSession.peerId = [peerId.displayName copy];
+                    return newSession;
                 }
             }
             return nil;
@@ -152,7 +198,7 @@
         [self.mySession disconnect];
         self.mySession.delegate = nil;
         self.mySession = nil;
-        self.mySession = [[MCSession alloc] initWithPeer:self.myPeerID
+        self.mySession = [[LxMultSession alloc] initWithPeer:self.myPeerID
                                         securityIdentity:nil
                                     encryptionPreference:MCEncryptionNone];
         self.mySession.delegate = self;
@@ -175,6 +221,8 @@
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state
 {
     NSLog(@"连接状态%ld,连接的绘画id%@",state,peerID.displayName);
+    LxMultSession *tempSession = (LxMultSession *)session;
+    tempSession.state = state;
     switch (state) {
         case MCSessionStateConnected:
         {
@@ -189,7 +237,15 @@
         case MCSessionStateNotConnected:
         {
             if (self.platformType == MC_PlatformClient && [peerID.displayName isEqualToString:self.serverId.displayName]) {//当学生失去与老师连接时，不论任何情况，停止连接并重新由老师发起邀请
+                self.mySession.delegate = nil;
+                [self.mySession disconnect];
                 [self.nearByAdvertiser startAdvertisingPeer];
+            }else if (self.platformType == MC_PlatformService)
+            {
+                
+                tempSession.delegate = nil;
+                [tempSession disconnect];
+                [self.sessionArray removeObject:tempSession];
             }
         }
             break;

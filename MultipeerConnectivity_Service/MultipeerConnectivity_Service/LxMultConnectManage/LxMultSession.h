@@ -21,4 +21,8 @@
  *会话的连接状态
  **/
 @property (assign, nonatomic) MCSessionState state;
+/**
+ *连接客户端的唯一标识id
+ **/
+@property (copy, nonatomic) NSString *peerId;
 @end

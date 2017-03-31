@@ -27,11 +27,24 @@ typedef void(^ConnectManagerBlock)(NSString *receiveMessage,NSString *peerId);
  **/
 
 - (void)setupPlatformType:(MC_PlatformType)type andPeerIDs:(NSArray *)peerIDs block:(ConnectManagerBlock)aBlock;
-
 /**
  *发送消息，暂时只有服务端和客户端的对发，，服务端默认发送所有已连接的客户端
  **/
 - (void)sendMessage:(NSString *)str;
+
+
+/**
+ *暂停所有连接
+ **/
+- (void)pauseAllConnect;
+
+/**
+ *继续所有控制
+ **/
+- (void)continueAllConnect;
+
+
+
 /**
  *重置连接状态
  **/

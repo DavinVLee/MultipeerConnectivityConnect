@@ -26,5 +26,13 @@ typedef MCSession *(^BrowserBlock)(MCPeerID *peerId,BOOL isLost);
  *重置搜寻功能
  **/
 - (void)resetBrowser;
+/**
+ *暂停搜索设备
+ **/
+- (void)pauseBrowser;
+/**
+ *继续搜索设备
+ **/
+- (void)continueBrowser;
 
 @end

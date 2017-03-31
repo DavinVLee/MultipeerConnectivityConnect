@@ -11,4 +11,9 @@
 @implementation LxMultSession
 
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"displayname:%@\n state = %ld",self.myPeerID.displayName,self.state];
+}
+
 @end
