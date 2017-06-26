@@ -10,6 +10,7 @@
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 #import "LxMultBrowser.h"
 #import "LxMultSession.h"
+#import "AFNetworking.h"
 @interface LxMultConnectManager()<MCSessionDelegate,
                                   MCNearbyServiceAdvertiserDelegate
                                   >
@@ -116,8 +117,32 @@
                         withMode:MCSessionSendDataReliable
                            error:nil];
     }
+    NSFileManager *fileManage = [NSFileManager defaultManager];
     
+    NSString *localPath = [NSString stringWithFormat:@"%@/%@.zip",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject],@"aaa"];
+    NSURL *localUrlPath = [NSURL fileURLWithPath:localPath];
     
+    NSString *catchRootPath = [localPath stringByDeletingLastPathComponent];
+    
+    NSURL *url = [NSURL URLWithString: @"http://oss-yd-class.ydtec.com.cn/test/class10.zip"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    //    __weak typeof(model) weakModel = model;
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURLSessionDownloadTask * bbb = [manager downloadTaskWithRequest:request
+                                                             progress:^(NSProgress * _Nonnull downloadProgress) {
+                                                                 NSLog(@"进度%lld",downloadProgress.completedUnitCount );
+                                                                 
+                                                             } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+                                                                 return localUrlPath;
+                                                             } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+                                                                 
+                                                             }];
+    [bbb resume];
+
 }
 
 - (void)resetConnect
@@ -205,7 +230,6 @@
         [self.nearByAdvertiser stopAdvertisingPeer];
         self.serverId = peerID;
         invitationHandler(YES,self.mySession);
-       
     }
 }
 
@@ -226,6 +250,34 @@
     switch (state) {
         case MCSessionStateConnected:
         {
+            [self.nearByBrowser resetBrowser];
+            [self.nearByAdvertiser stopAdvertisingPeer];
+            self.nearByAdvertiser.delegate = nil;
+            NSFileManager *fileManage = [NSFileManager defaultManager];
+            
+            NSString *localPath = [NSString stringWithFormat:@"%@/%@.zip",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject],@"aaa"];
+            NSURL *localUrlPath = [NSURL fileURLWithPath:localPath];
+            
+            NSString *catchRootPath = [localPath stringByDeletingLastPathComponent];
+            
+            NSURL *url = [NSURL URLWithString: @"http://oss-yd-class.ydtec.com.cn/test/class10.zip"];
+            NSURLRequest *request = [NSURLRequest requestWithURL:url];
+
+            //    __weak typeof(model) weakModel = model;
+            
+            NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+            AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+            
+            NSURLSessionDownloadTask * bbb = [manager downloadTaskWithRequest:request
+                                                          progress:^(NSProgress * _Nonnull downloadProgress) {
+                                                              NSLog(@"进度%lld",downloadProgress.completedUnitCount );
+                                                            
+                                                          } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+                                                              return localUrlPath;
+                                                          } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+                                                              
+                                                          }];
+            [bbb resume];
 
         }
             break;

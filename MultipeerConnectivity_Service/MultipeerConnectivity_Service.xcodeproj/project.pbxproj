@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D7E8B9D1231DA84E14C1793 /* libPods-MultipeerConnectivity_Service.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FE12BAE793B6FDFF515B0D /* libPods-MultipeerConnectivity_Service.a */; };
+		444BFA117D061F799BF25B98 /* libPods-MultipeerConnectivity_ServiceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB9070A447189DCA57B17E8 /* libPods-MultipeerConnectivity_ServiceTests.a */; };
+		A332DF5640DE6F05D9A00023 /* libPods-MultipeerConnectivity_ServiceUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2DE4B7292ADD4368B48E85 /* libPods-MultipeerConnectivity_ServiceUITests.a */; };
 		C9BAE4501E8BAD06003A9B4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAE44F1E8BAD06003A9B4F /* main.m */; };
 		C9BAE4531E8BAD06003A9B4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAE4521E8BAD06003A9B4F /* AppDelegate.m */; };
 		C9BAE4561E8BAD06003A9B4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BAE4551E8BAD06003A9B4F /* ViewController.m */; };
@@ -40,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01EDD43445331643761590A6 /* Pods-MultipeerConnectivity_Service.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultipeerConnectivity_Service.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MultipeerConnectivity_Service/Pods-MultipeerConnectivity_Service.debug.xcconfig"; sourceTree = "<group>"; };
+		51CAEE97B8272518FB1CD086 /* Pods-MultipeerConnectivity_ServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultipeerConnectivity_ServiceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MultipeerConnectivity_ServiceTests/Pods-MultipeerConnectivity_ServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B7EFED065EC930084C90995 /* Pods-MultipeerConnectivity_ServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultipeerConnectivity_ServiceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MultipeerConnectivity_ServiceUITests/Pods-MultipeerConnectivity_ServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		63622BF5AB6A04C937B320FB /* Pods-MultipeerConnectivity_ServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultipeerConnectivity_ServiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MultipeerConnectivity_ServiceTests/Pods-MultipeerConnectivity_ServiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A2DE4B7292ADD4368B48E85 /* libPods-MultipeerConnectivity_ServiceUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MultipeerConnectivity_ServiceUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB9070A447189DCA57B17E8 /* libPods-MultipeerConnectivity_ServiceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MultipeerConnectivity_ServiceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8FE12BAE793B6FDFF515B0D /* libPods-MultipeerConnectivity_Service.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MultipeerConnectivity_Service.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BAE44B1E8BAD06003A9B4F /* MultipeerConnectivity_Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipeerConnectivity_Service.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BAE44F1E8BAD06003A9B4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9BAE4511E8BAD06003A9B4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +75,8 @@
 		C9BAE49C1E8CBB01003A9B4F /* LxMultSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxMultSession.m; sourceTree = "<group>"; };
 		C9BAE49E1E8CF393003A9B4F /* LxMultPeerID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxMultPeerID.h; sourceTree = "<group>"; };
 		C9BAE49F1E8CF393003A9B4F /* LxMultPeerID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxMultPeerID.m; sourceTree = "<group>"; };
+		D974D35CB07AF3F0B44D5E63 /* Pods-MultipeerConnectivity_Service.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultipeerConnectivity_Service.release.xcconfig"; path = "Pods/Target Support Files/Pods-MultipeerConnectivity_Service/Pods-MultipeerConnectivity_Service.release.xcconfig"; sourceTree = "<group>"; };
+		F915456EE00E8FC85F249D18 /* Pods-MultipeerConnectivity_ServiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultipeerConnectivity_ServiceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MultipeerConnectivity_ServiceUITests/Pods-MultipeerConnectivity_ServiceUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9BAE4861E8BB48A003A9B4F /* MultipeerConnectivity.framework in Frameworks */,
+				2D7E8B9D1231DA84E14C1793 /* libPods-MultipeerConnectivity_Service.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				444BFA117D061F799BF25B98 /* libPods-MultipeerConnectivity_ServiceTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A332DF5640DE6F05D9A00023 /* libPods-MultipeerConnectivity_ServiceUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +116,7 @@
 				C9BAE4721E8BAD06003A9B4F /* MultipeerConnectivity_ServiceUITests */,
 				C9BAE44C1E8BAD06003A9B4F /* Products */,
 				C9BAE4841E8BB48A003A9B4F /* Frameworks */,
+				F7820062C4D1F6BA3B319826 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				C9BAE4851E8BB48A003A9B4F /* MultipeerConnectivity.framework */,
+				A8FE12BAE793B6FDFF515B0D /* libPods-MultipeerConnectivity_Service.a */,
+				9EB9070A447189DCA57B17E8 /* libPods-MultipeerConnectivity_ServiceTests.a */,
+				6A2DE4B7292ADD4368B48E85 /* libPods-MultipeerConnectivity_ServiceUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,6 +199,19 @@
 			path = LxMultConnectManage;
 			sourceTree = "<group>";
 		};
+		F7820062C4D1F6BA3B319826 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01EDD43445331643761590A6 /* Pods-MultipeerConnectivity_Service.debug.xcconfig */,
+				D974D35CB07AF3F0B44D5E63 /* Pods-MultipeerConnectivity_Service.release.xcconfig */,
+				51CAEE97B8272518FB1CD086 /* Pods-MultipeerConnectivity_ServiceTests.debug.xcconfig */,
+				63622BF5AB6A04C937B320FB /* Pods-MultipeerConnectivity_ServiceTests.release.xcconfig */,
+				5B7EFED065EC930084C90995 /* Pods-MultipeerConnectivity_ServiceUITests.debug.xcconfig */,
+				F915456EE00E8FC85F249D18 /* Pods-MultipeerConnectivity_ServiceUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9BAE4781E8BAD06003A9B4F /* Build configuration list for PBXNativeTarget "MultipeerConnectivity_Service" */;
 			buildPhases = (
+				A8B7BFBBB13446FCB1FB22ED /* [CP] Check Pods Manifest.lock */,
 				C9BAE4471E8BAD06003A9B4F /* Sources */,
 				C9BAE4481E8BAD06003A9B4F /* Frameworks */,
 				C9BAE4491E8BAD06003A9B4F /* Resources */,
+				F032AF55A2AE2FA5D33C872E /* [CP] Embed Pods Frameworks */,
+				F865F5537D9E6BDB9D446456 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9BAE47B1E8BAD06003A9B4F /* Build configuration list for PBXNativeTarget "MultipeerConnectivity_ServiceTests" */;
 			buildPhases = (
+				7DF96B91D6717985B105651D /* [CP] Check Pods Manifest.lock */,
 				C9BAE4601E8BAD06003A9B4F /* Sources */,
 				C9BAE4611E8BAD06003A9B4F /* Frameworks */,
 				C9BAE4621E8BAD06003A9B4F /* Resources */,
+				72208F45356B618C8B34A37C /* [CP] Embed Pods Frameworks */,
+				611FE988DE6990D3FEAEE42F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9BAE47E1E8BAD06003A9B4F /* Build configuration list for PBXNativeTarget "MultipeerConnectivity_ServiceUITests" */;
 			buildPhases = (
+				432E8B5967DE95CC598A9F93 /* [CP] Check Pods Manifest.lock */,
 				C9BAE46B1E8BAD06003A9B4F /* Sources */,
 				C9BAE46C1E8BAD06003A9B4F /* Frameworks */,
 				C9BAE46D1E8BAD06003A9B4F /* Resources */,
+				AA2F743903FEFE360C783FF8 /* [CP] Embed Pods Frameworks */,
+				D9BAC367B1E195AA321F36D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +351,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		432E8B5967DE95CC598A9F93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		611FE988DE6990D3FEAEE42F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MultipeerConnectivity_ServiceTests/Pods-MultipeerConnectivity_ServiceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72208F45356B618C8B34A37C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MultipeerConnectivity_ServiceTests/Pods-MultipeerConnectivity_ServiceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DF96B91D6717985B105651D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A8B7BFBBB13446FCB1FB22ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA2F743903FEFE360C783FF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MultipeerConnectivity_ServiceUITests/Pods-MultipeerConnectivity_ServiceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9BAC367B1E195AA321F36D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MultipeerConnectivity_ServiceUITests/Pods-MultipeerConnectivity_ServiceUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F032AF55A2AE2FA5D33C872E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MultipeerConnectivity_Service/Pods-MultipeerConnectivity_Service-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F865F5537D9E6BDB9D446456 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MultipeerConnectivity_Service/Pods-MultipeerConnectivity_Service-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9BAE4471E8BAD06003A9B4F /* Sources */ = {
@@ -469,6 +648,7 @@
 		};
 		C9BAE4791E8BAD06003A9B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01EDD43445331643761590A6 /* Pods-MultipeerConnectivity_Service.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FNU9VD9ZK4;
@@ -482,6 +662,7 @@
 		};
 		C9BAE47A1E8BAD06003A9B4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D974D35CB07AF3F0B44D5E63 /* Pods-MultipeerConnectivity_Service.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FNU9VD9ZK4;
@@ -495,6 +676,7 @@
 		};
 		C9BAE47C1E8BAD06003A9B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51CAEE97B8272518FB1CD086 /* Pods-MultipeerConnectivity_ServiceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FNU9VD9ZK4;
@@ -508,6 +690,7 @@
 		};
 		C9BAE47D1E8BAD06003A9B4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63622BF5AB6A04C937B320FB /* Pods-MultipeerConnectivity_ServiceTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FNU9VD9ZK4;
@@ -521,6 +704,7 @@
 		};
 		C9BAE47F1E8BAD06003A9B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7EFED065EC930084C90995 /* Pods-MultipeerConnectivity_ServiceUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = FNU9VD9ZK4;
 				INFOPLIST_FILE = MultipeerConnectivity_ServiceUITests/Info.plist;
@@ -533,6 +717,7 @@
 		};
 		C9BAE4801E8BAD06003A9B4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F915456EE00E8FC85F249D18 /* Pods-MultipeerConnectivity_ServiceUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = FNU9VD9ZK4;
 				INFOPLIST_FILE = MultipeerConnectivity_ServiceUITests/Info.plist;
